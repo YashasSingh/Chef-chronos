@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cwdjqu18dn1y"]
+
+[ext_resource type="Script" uid="uid://dcf6hcj7tfcws" path="res://OrchestratorScripts/ck_breast.torch" id="1_xx6st"]
+[ext_resource type="Texture2D" uid="uid://8bk8q76mxoju" path="res://Sprites/chickenbreasttemp.png" id="2_oqe53"]
+
+[node name="CKBreast" type="Node2D" unique_id=891771804]
+script = ExtResource("1_xx6st")
+
+[node name="Breast" type="Sprite2D" parent="." unique_id=1918054952]
+texture = ExtResource("2_oqe53")

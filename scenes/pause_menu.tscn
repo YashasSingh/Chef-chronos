@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://cjme6x2qxilx"]
+
+[ext_resource type="Texture2D" uid="uid://b16xo75fcc0fw" path="res://Sprites/images.jpg" id="2_05uyy"]
+[ext_resource type="Script" uid="uid://b560oo80d5vyi" path="res://OrchestratorScripts/pause.torch" id="2_p81d2"]
+
+[node name="PauseMenu" type="CanvasLayer" unique_id=190609845]
+process_mode = 3
+follow_viewport_enabled = true
+script = ExtResource("2_p81d2")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=622432780]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -2416.0
+offset_top = -1268.0
+offset_right = 1280.0
+offset_bottom = 580.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+color = Color(0, 0, 0, 0.7294118)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=897239029]
+scale = Vector2(2.7936509, 2.7936509)
+texture = ExtResource("2_05uyy")
+
+[node name="MenuButtons" type="Node2D" parent="." unique_id=537229449]
+scale = Vector2(2.7936509, 2.7936509)
+
+[node name="Save" type="Button" parent="MenuButtons" unique_id=2059438699]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -60.19886
+offset_top = 31.499998
+offset_right = 59.80114
+offset_bottom = 80.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "Save and Load
+"
+
+[node name="RestartSection" type="Button" parent="MenuButtons" unique_id=1159182340]
+offset_left = -57.272724
+offset_top = -37.227272
+offset_right = 67.72728
+offset_bottom = -6.227272
+text = "Restart Section"
+
+[node name="Settings" type="Button" parent="MenuButtons" unique_id=1339266961]
+offset_left = -34.363636
+offset_top = -111.681816
+offset_right = 35.636364
+offset_bottom = -80.681816
+text = "Settings"
+
+[node name="Exit" type="Button" parent="MenuButtons" unique_id=196973664]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -18.31818
+offset_top = 100.727264
+offset_right = 18.68182
+offset_bottom = 131.72726
+grow_horizontal = 2
+grow_vertical = 2
+text = "Exit
+"

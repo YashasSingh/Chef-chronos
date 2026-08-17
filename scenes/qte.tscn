@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://ct37i5g178ck1"]
+
+[ext_resource type="Texture2D" uid="uid://b5mve27l1nqey" path="res://Sprites/PHW.svg" id="1_fcuux"]
+[ext_resource type="Script" uid="uid://qs1u7b87mlvw" path="res://OrchestratorScripts/qte.torch" id="1_lbcdu"]
+[ext_resource type="AudioStream" uid="uid://x7yxasb1hhnh" path="res://sounds/meldix-success-340660.mp3" id="4_1k5uo"]
+[ext_resource type="Texture2D" uid="uid://ckhfmh1r485mx" path="res://Sprites/Fail.png" id="5_e5op3"]
+[ext_resource type="Texture2D" uid="uid://3b15hc0why2f" path="res://Sprites/miss.png" id="5_impyq"]
+
+[node name="QTE" type="Node2D" unique_id=1932495917]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_lbcdu")
+
+[node name="PerfectHitSprite" type="Sprite2D" parent="." unique_id=1540111110]
+texture = ExtResource("1_fcuux")
+
+[node name="TimerSprite" type="Sprite2D" parent="PerfectHitSprite" unique_id=46946954]
+modulate = Color(0.0627451, 1, 1, 0.5372549)
+scale = Vector2(1, 0.9999997)
+texture = ExtResource("1_fcuux")
+region_rect = Rect2(0, 0, 447, 447)
+
+[node name="QteKey" type="RichTextLabel" parent="PerfectHitSprite" unique_id=1743995537]
+offset_left = -122.0
+offset_top = -280.0
+offset_right = 316.0
+offset_bottom = 812.0
+size_flags_horizontal = 4
+theme_override_colors/default_color = Color(0.25663337, 0.2566334, 0.25663337, 1)
+theme_override_font_sizes/normal_font_size = 400
+text = "X"
+fit_content = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1234442858]
+stream = ExtResource("4_1k5uo")
+
+[node name="FailSprite" type="Sprite2D" parent="." unique_id=1802817930]
+visible = false
+scale = Vector2(1.8555555, 1.8555555)
+texture = ExtResource("5_e5op3")
+
+[node name="MissSprite" type="Sprite2D" parent="." unique_id=643219908]
+visible = false
+modulate = Color(0.2901961, 0.44313726, 0.9529412, 1)
+position = Vector2(157.99998, -160)
+rotation = 0.7347836
+scale = Vector2(1.7272726, 1.7272727)
+texture = ExtResource("5_impyq")

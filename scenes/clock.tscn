@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://bhemewiqx5tvp"]
+
+[ext_resource type="Texture2D" uid="uid://b5mve27l1nqey" path="res://Sprites/PHW.svg" id="1_kig64"]
+[ext_resource type="Texture2D" uid="uid://ims71teht1im" path="res://Sprites/blank-clock.png" id="2_4n1wf"]
+[ext_resource type="Script" uid="uid://breflboaftb27" path="res://OrchestratorScripts/ClockHands.torch" id="4_7dv1d"]
+
+[node name="Clock" type="Node2D" unique_id=1049672540]
+
+[node name="ClockBG" type="Sprite2D" parent="." unique_id=1892179439]
+texture = ExtResource("1_kig64")
+script = ExtResource("4_7dv1d")
+
+[node name="ClockNumberSprite" type="Sprite2D" parent="ClockBG" unique_id=1079725707]
+scale = Vector2(0.53, 0.53)
+texture = ExtResource("2_4n1wf")
+
+[node name="ClockHand" type="Polygon2D" parent="ClockBG/ClockNumberSprite" unique_id=30976222]
+color = Color(0.008202022, 0.008202025, 0.008202025, 1)
+polygon = PackedVector2Array(-16, 15.999986, -8.000061, -192.00002, -6.1035156e-05, -208.00002, -6.1035156e-05, -208.00002, 7.999939, -192.00002, 16, 15.999986, 0, 15.999986)
+uv = PackedVector2Array(-16.000008, 8, -16.000048, -80, -8.000048, -96, -8.000048, -96, -4.7683716e-05, -80, -4.7683716e-05, -48, -8.000048, -48)
+
+[node name="TotalTimerScene" type="Timer" parent="." unique_id=249826495]
+one_shot = true

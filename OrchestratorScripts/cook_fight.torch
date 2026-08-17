@@ -1,0 +1,46 @@
+[orchestration type="OScript" load_steps=6 format=4 uid="uid://bloy00kgbt74h"]
+
+[obj type="OScriptFunction" id="OScriptFunction_orolp"]
+guid = "AC7536EC-5ACF-484F-AB39-2E2EF4568955"
+method = {
+"name": &"_ready",
+"flags": 8
+}
+id = 0
+
+[obj type="OScriptGraph" id="OScriptGraph_10o0e"]
+graph_name = &"EventGraph"
+flags = 8
+nodes = Array[int]([0, 1, 4])
+functions = Array[int]([0])
+
+[obj type="OScriptNodeEvent" id="OScriptNodeEvent_10o0e"]
+function_id = "AC7536EC-5ACF-484F-AB39-2E2EF4568955"
+id = 0
+position = Vector2(160, 480)
+pin_data = Array[Dictionary]([{
+"pin_name": &"ExecOut",
+"dir": 1,
+"flags": 4
+}])
+
+[obj type="OScriptNodeComment" id="OScriptNodeComment_bh8nx"]
+comments = "Called when the node enters the scene tree for the first time.
+Replace the function body."
+id = 1
+size = Vector2(443, 230)
+position = Vector2(220, 360)
+
+[obj type="OScriptNodeComment" id="OScriptNodeComment_sra6w"]
+comments = "Called every frame.
+'delta' is the elapsed time since the previous frame."
+id = 4
+size = Vector2(443, 230)
+position = Vector2(220, 740)
+
+[resource]
+base_type = &"Node"
+description = "Base template for Node with default Godot cycle methods."
+functions = Array[OScriptFunction]([SubResource("OScriptFunction_orolp")])
+nodes = Array[OScriptNode]([SubResource("OScriptNodeEvent_10o0e"), SubResource("OScriptNodeComment_bh8nx"), SubResource("OScriptNodeComment_sra6w")])
+graphs = Array[OScriptGraph]([SubResource("OScriptGraph_10o0e")])
