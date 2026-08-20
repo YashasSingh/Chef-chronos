@@ -1,3 +1,26 @@
 [gd_scene format=3 uid="uid://vehwuyrwpsk6"]
 
+[ext_resource type="Texture2D" uid="uid://b16xo75fcc0fw" path="res://Sprites/images.jpg" id="1_6awse"]
+
 [node name="SaveLoad" type="CanvasLayer" unique_id=946223387]
+auto_translate_mode = 1
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1281618078]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -2416.0
+offset_top = -1268.0
+offset_right = 1280.0
+offset_bottom = 580.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+color = Color(0, 0, 0, 0.7294118)
+
+[node name="Sprite2D" type="Sprite2D" parent="ColorRect" unique_id=1091423703]
+position = Vector2(1840, 944)
+scale = Vector2(2.7936509, 2.7936509)
+texture = ExtResource("1_6awse")

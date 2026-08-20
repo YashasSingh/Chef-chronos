@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://bhemewiqx5tvp" path="res://scenes/clock.tscn" id="3_reaf4"]
 [ext_resource type="PackedScene" uid="uid://cjme6x2qxilx" path="res://scenes/pause_menu.tscn" id="4_bcgj3"]
 [ext_resource type="PackedScene" uid="uid://cwdjqu18dn1y" path="res://scenes/ck_breast.tscn" id="6_bcgj3"]
+[ext_resource type="PackedScene" uid="uid://bmilijrt53yrm" path="res://scenes/knife.tscn" id="7_a0rqm"]
 
 [node name="CookFight" type="Node2D" unique_id=654211347]
 script = ExtResource("1_cy083")
@@ -30,8 +31,11 @@ position = Vector2(-497, -252)
 scale = Vector2(0.3, 0.3)
 
 [node name="CKBreast" parent="." unique_id=891771804 instance=ExtResource("6_bcgj3")]
-position = Vector2(2, 2)
 scale = Vector2(0.29999998, 0.29999998)
+
+[node name="Knife" parent="." unique_id=1639673893 instance=ExtResource("7_a0rqm")]
+position = Vector2(315, -2)
+scale = Vector2(0.7, 0.7)
 
 [node name="PauseMenu" parent="." unique_id=726585172 instance=ExtResource("4_bcgj3")]
 visible = false

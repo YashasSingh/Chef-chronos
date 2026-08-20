@@ -1,7 +1,9 @@
 
-cute cursor
+
 
 set up knife
+    @have knife sprite follow cursor
+    add collusion boxes on knife
 
 
 cut sections/myster meat atm
@@ -14,6 +16,12 @@ cut sections/myster meat atm
 
 
 Buttons for menu settings
+    exitgame function
+        @call method used 
+            "quit" is failing
+
+        
+
     hover for aditional info
     slight glow?
     @working with gamepad

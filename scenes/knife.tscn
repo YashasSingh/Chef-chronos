@@ -6,6 +6,14 @@
 [node name="Knife" type="Node2D" unique_id=1639673893]
 script = ExtResource("1_syuqf")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1341347510]
+[node name="Knifesprite" type="Sprite2D" parent="." unique_id=1341347510]
+position = Vector2(8, 8)
 rotation = 2.1188297
 texture = ExtResource("1_ufhdc")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1583998030]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CharacterBody2D" unique_id=2116437214]
+position = Vector2(-10.650002, -210.79999)
+scale = Vector2(2.4791665, 4.8749995)
+polygon = PackedVector2Array(0, 0, -5.384874, 56.369232, -11.838655, 56.369232, -15.065546, 21.907692, -11.838655, 3.8564072, -2.1579828, -10.912823)

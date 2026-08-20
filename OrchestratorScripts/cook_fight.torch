@@ -1,4 +1,4 @@
-[orchestration type="OScript" load_steps=6 format=4 uid="uid://bloy00kgbt74h"]
+[orchestration type="OScript" load_steps=11 format=4 uid="uid://bloy00kgbt74h"]
 
 [obj type="OScriptFunction" id="OScriptFunction_orolp"]
 guid = "AC7536EC-5ACF-484F-AB39-2E2EF4568955"
@@ -8,11 +8,25 @@ method = {
 }
 id = 0
 
+[obj type="OScriptFunction" id="OScriptFunction_bcgj3"]
+guid = "29461BFE-FB98-4CDF-B903-EBE491B1B6A7"
+method = {
+"name": &"ChickenFunc"
+}
+user_defined = true
+id = 5
+
 [obj type="OScriptGraph" id="OScriptGraph_10o0e"]
 graph_name = &"EventGraph"
 flags = 8
-nodes = Array[int]([0, 1, 4])
+nodes = Array[int]([0, 1, 4, 7])
 functions = Array[int]([0])
+
+[obj type="OScriptGraph" id="OScriptGraph_a0rqm"]
+graph_name = &"ChickenFunc"
+flags = 22
+nodes = Array[int]([5, 6])
+functions = Array[int]([5])
 
 [obj type="OScriptNodeEvent" id="OScriptNodeEvent_10o0e"]
 function_id = "AC7536EC-5ACF-484F-AB39-2E2EF4568955"
@@ -28,8 +42,8 @@ pin_data = Array[Dictionary]([{
 comments = "Called when the node enters the scene tree for the first time.
 Replace the function body."
 id = 1
-size = Vector2(443, 230)
-position = Vector2(220, 360)
+size = Vector2(443.0000915527344, 230.00003051757813)
+position = Vector2(840, 240)
 
 [obj type="OScriptNodeComment" id="OScriptNodeComment_sra6w"]
 comments = "Called every frame.
@@ -38,9 +52,55 @@ id = 4
 size = Vector2(443, 230)
 position = Vector2(220, 740)
 
+[obj type="OScriptNodeFunctionEntry" id="OScriptNodeFunctionEntry_d6goj"]
+function_id = "29461BFE-FB98-4CDF-B903-EBE491B1B6A7"
+id = 5
+pin_data = Array[Dictionary]([{
+"pin_name": &"ExecOut",
+"dir": 1,
+"flags": 4
+}])
+
+[obj type="OScriptNodeFunctionResult" id="OScriptNodeFunctionResult_02j3t"]
+function_id = "29461BFE-FB98-4CDF-B903-EBE491B1B6A7"
+id = 6
+position = Vector2(300, 0)
+pin_data = Array[Dictionary]([{
+"pin_name": &"ExecIn",
+"flags": 4
+}])
+
+[obj type="OScriptNodeInstantiateScene" id="OScriptNodeInstantiateScene_1v0lq"]
+scene = "res://scenes/knife.tscn"
+id = 7
+size = Vector2(425, 139)
+position = Vector2(405.3287353515625, 550.2723388671875)
+pin_data = Array[Dictionary]([{
+"pin_name": &"ExecIn",
+"flags": 4
+}, {
+"pin_name": &"scene",
+"type": 4,
+"flags": 8388610,
+"dv": "res://scenes/knife.tscn",
+"hint": 13,
+"hint_string": "*.scn,*.tscn"
+}, {
+"pin_name": &"ExecOut",
+"dir": 1,
+"flags": 4
+}, {
+"pin_name": &"scene_root",
+"type": 24,
+"dir": 1,
+"flags": 2,
+"target_class": "Node2D"
+}])
+
 [resource]
 base_type = &"Node"
 description = "Base template for Node with default Godot cycle methods."
-functions = Array[OScriptFunction]([SubResource("OScriptFunction_orolp")])
-nodes = Array[OScriptNode]([SubResource("OScriptNodeEvent_10o0e"), SubResource("OScriptNodeComment_bh8nx"), SubResource("OScriptNodeComment_sra6w")])
-graphs = Array[OScriptGraph]([SubResource("OScriptGraph_10o0e")])
+functions = Array[OScriptFunction]([SubResource("OScriptFunction_orolp"), SubResource("OScriptFunction_bcgj3")])
+connections = Array[int]([5, 0, 6, 0, 0, 0, 7, 0])
+nodes = Array[OScriptNode]([SubResource("OScriptNodeEvent_10o0e"), SubResource("OScriptNodeComment_bh8nx"), SubResource("OScriptNodeComment_sra6w"), SubResource("OScriptNodeFunctionEntry_d6goj"), SubResource("OScriptNodeFunctionResult_02j3t"), SubResource("OScriptNodeInstantiateScene_1v0lq")])
+graphs = Array[OScriptGraph]([SubResource("OScriptGraph_10o0e"), SubResource("OScriptGraph_a0rqm")])
